@@ -1,68 +1,222 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Colours */
+  --white: #ffffff;
+  --black: #000000;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --purple-99: #fbfaff;
+  --purple-97: #f4f0fe;
+  --purple-95: #ede7fe;
+  --purple-90: #dbcefd;
+  --purple-75: #a685fa;
+  --purple-70: #946cf9;
+  --purple-65: #8254f8;
+  --purple-60: #703bf7;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --white-99: #fcfcfd;
+  --white-97: #f1f1f3;
+  --white-95: #f1f1f3;
+  --white-90: #e4e4e7;
+
+  --grey-08: #141414;
+  --grey-10: #1a1a1a;
+  --grey-15: #262626;
+  --grey-20: #333333;
+  --grey-30: #4d4d4d;
+  --grey-40: #666666;
+  --grey-50: #808080;
+  --grey-60: #999999;
+
+  /* Desktop Typography */
+  --title: 5rem;
+  --heading-1: 4.375rem;
+  --heading-2: 3.625rem;
+  --heading-3: 2.5rem;
+  --heading-4: 2rem;
+  --heading-5: 1.5rem;
+  --heading-6: 1.25rem;
+  --body-copy: 1.125rem;
+
+  /* Laptop Typography */
+  --laptop-heading-1: 2.5rem;
+  --laptop-heading-2: 2.75rem;
+  --laptop-heading-3: 1.875rem;
+  --laptop-heading-4: 1.375rem;
+  --laptop-heading-5: 1.25rem;
+  --laptop-heading-6: 1.125rem;
+  --laptop-body-copy: 1rem;
+
+  /* Mobile Typography */
+  --mobile-heading-1: 1.875rem;
+  --mobile-heading-2: 1.75rem;
+  --mobile-heading-3: 1.5rem;
+  --mobile-heading-4: 1.125rem;
+  --mobile-heading-5: 1rem;
+  --mobile-heading-6: 0.875rem;
+  --mobile-body-copy: 0.875rem;
+  /* ------------------------ */
+
+  /* Spacing */
+  --spacing-160: 10rem;
+  --spacing-120: 7.5rem;
+  --spacing-100: 6.25rem;
+  --spacing-80: 5rem;
+  --spacing-40: 2.5rem;
+  --spacing-60: 3.75rem;
+  --spacing-50: 3.125rem;
+  --spacing-30: 1.875rem;
+  --spacing-28: 1.75rem;
+  --spacing-24: 1.5rem;
+  --spacing-20: 1.25rem;
+  --spacing-18: 1.125rem;
+  --spacing-16: 1rem;
+  --spacing-14: 0.875rem;
+  --spacing-12: 0.75rem;
+  --spacing-10: 0.625rem;
+  --spacing-8: 0.5rem;
+  --spacing-6: 0.375rem;
+  --spacing-4: 0.25rem;
+
+  /* Border */
+  --border: 1px solid var(--dark-15);
 }
 
-a {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter18pt-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Inter18pt-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fontsInter18pt-Medium.woff2") format("woff2"),
+    url("/assets/fontsInter18pt-Medium.woff") format("woff");
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-style: normal;
+  font-display: swap;
 }
-a:hover {
-  color: #535bf2;
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter18pt-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Inter18pt-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter18pt-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/Inter18pt-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("/assets/fonts/KumbhSans-Regular.woff2") format("woff2"),
+    url("/assets/fonts/KumbhSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kumbh Sans";
+  src: url("/assets/fonts/KumbhSans-Medium.woff2") format("woff2"),
+    url("/assets/fonts/KumbhSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "Urbanist", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: var(--laptop-body-copy);
+  line-height: 1.6;
+  background-color: var(--grey-08);
+  color: var(--grey-60);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--white);
+  line-height: 1.1;
+  font-weight: 500;
+  font-family: "Urbanist";
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: var(--laptop-heading-1);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--laptop-heading-2);
+}
+
+h3 {
+  font-size: var(--laptop-heading-3);
+}
+
+h4 {
+  font-size: var(--laptop-heading-4);
+}
+
+h5 {
+  font-size: var(--laptop-heading-5);
+}
+
+h6 {
+  font-size: var(--laptop-heading-6);
+}
+
+p {
+  max-width: 56ch;
+}
+
+.title {
+  font-size: var(--title);
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  all: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+ul {
+  list-style: none;
+}
+
+main,
+footer {
+  width: 100%;
+  max-width: 1596px;
+  margin-top: 7rem;
 }
