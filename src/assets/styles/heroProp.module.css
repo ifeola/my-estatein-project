@@ -1,0 +1,91 @@
+.properties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  padding: var(--spacing-10);
+  background-color: var(--grey-08);
+  border: 1px solid var(--grey-15);
+}
+
+.properties > div {
+  flex-basis: 100%;
+  border-radius: 8px;
+  text-align: center;
+  padding: var(--spacing-20);
+  background-color: var(--grey-10);
+  border: 1px solid var(--grey-15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle__outer,
+.circle__inner {
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle__outer {
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 2;
+  background-image: linear-gradient(
+    45deg,
+    var(--purple-60),
+    rgba(255, 255, 255, 0),
+    var(--purple-60)
+  );
+  margin-block-end: var(--spacing-16);
+}
+
+.circle__inner {
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 3;
+  background-image: linear-gradient(
+    135deg,
+    var(--purple-60),
+    rgba(255, 255, 255, 0),
+    var(--purple-60)
+  );
+}
+
+.circle__inner::after {
+  z-index: 4;
+}
+
+.circle__outer::after {
+  z-index: 2;
+}
+
+.circle__inner::after,
+.circle__outer::after {
+  content: "";
+  position: absolute;
+  width: 94%;
+  height: 94%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--grey-10);
+}
+
+.circle__outer svg {
+  position: relative;
+  z-index: 10;
+}
+
+.prop__arrow {
+  position: absolute;
+  right: var(--spacing-16);
+  top: var(--spacing-16);
+  cursor: pointer;
+}

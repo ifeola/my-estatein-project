@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom";
-import { Facebook, LinkedIn, Mail, Send, Twitter, YouTube } from "./Icons";
+import {
+  Facebook,
+  LinkedIn,
+  Mail,
+  Send,
+  Twitter,
+  YouTube,
+} from "../utils/Icons";
 import style from "../styles/Footer.module.css";
 
 const data = {
@@ -23,7 +30,7 @@ const Footer = () => {
         <div className={style.footer__nav}>
           <div className={style.footer__left}>
             <img
-              src="/public/assets/Logo-footer.svg"
+              src="/assets/Logo-footer.svg"
               alt="Footer Logo"
               className={style.footer__logo}
             />
@@ -42,40 +49,40 @@ const Footer = () => {
             <div>
               <h6>Home</h6>
               <ul className={style.footer__links}>
-                {data.home.map((link) => {
-                  return <Link>{link}</Link>;
+                {data.home.map((item, index) => {
+                  return <Link key={index}>{item}</Link>;
                 })}
               </ul>
             </div>
             <div>
               <h6>About Us</h6>
               <ul className={style.footer__links}>
-                {data.about.map((link) => {
-                  return <Link>{link}</Link>;
+                {data.about.map((item, index) => {
+                  return <Link key={index}>{item}</Link>;
                 })}
               </ul>
             </div>
             <div>
               <h6>Properties</h6>
               <ul className={style.footer__links}>
-                {data.properties.map((link) => {
-                  return <Link>{link}</Link>;
+                {data.properties.map((item, index) => {
+                  return <Link key={index}>{item}</Link>;
                 })}
               </ul>
             </div>
             <div>
               <h6>Services</h6>
               <ul className={style.footer__links}>
-                {data.services.map((link) => {
-                  return <Link>{link}</Link>;
+                {data.services.map((item, index) => {
+                  return <Link key={index}>{item}</Link>;
                 })}
               </ul>
             </div>
             <div>
               <h6>Contact Us</h6>
               <ul className={style.footer__links}>
-                {data.contact.map((link) => {
-                  return <Link>{link}</Link>;
+                {data.contact.map((item, index) => {
+                  return <Link key={index}>{item}</Link>;
                 })}
               </ul>
             </div>

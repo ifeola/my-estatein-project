@@ -11,14 +11,14 @@ function Header() {
 
   return (
     <header className={style.header}>
-      <Link className={style.header__sub}>
+      <h6 className={style.header__sub}>
         ✨Discover Your Dream Property with Estatein
         <Link>Learn More</Link>
-      </Link>
+      </h6>
       <nav className={style.nav}>
         <Link to="/" className={style.logo}>
           <img
-            src="/public/assets/Logo.svg"
+            src="/assets/Logo.svg"
             className={style.logo__image}
             alt="Logo Image"
           />

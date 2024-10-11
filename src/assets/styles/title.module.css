@@ -1,0 +1,21 @@
+.title__content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-block-start: var(--spacing-4);
+}
+
+.title__desc {
+  margin-block-end: var(--spacing-10);
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 8px;
+  padding: var(--spacing-14) var(--spacing-40);
+  border: 1px solid var(--grey-15);
+  background-color: var(--grey-10);
+}
