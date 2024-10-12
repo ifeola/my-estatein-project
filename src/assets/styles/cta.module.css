@@ -1,0 +1,22 @@
+.cta {
+  margin-block-start: var(--spacing-60);
+  padding-inline: var(--spacing-80);
+  padding-block: var(--spacing-60);
+  border-top: 1px solid var(--grey-15);
+}
+
+.cta > div > div {
+  align-items: center;
+}
+
+@media screen and (width < 768px) {
+  .cta {
+    padding-inline: var(--spacing-16);
+    padding-block-start: var(--spacing-60);
+  }
+
+  .cta button {
+    width: 100%;
+    margin-block-start: var(--spacing-20);
+  }
+}

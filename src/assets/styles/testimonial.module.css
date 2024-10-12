@@ -1,0 +1,34 @@
+.testimonial {
+  display: grid;
+  gap: var(--spacing-30);
+  padding: var(--spacing-30);
+  border-radius: 8px;
+  border: 1px solid var(--grey-15);
+}
+
+.testimonial__rating {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.testimonial__rating span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid var(--grey-15);
+}
+
+.testimonial__content {
+  display: grid;
+  gap: var(--spacing-10);
+}
+
+.testimonial__client {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-10);
+}

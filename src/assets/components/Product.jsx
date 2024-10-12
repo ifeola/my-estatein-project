@@ -1,17 +1,29 @@
 import { Bathroom, Bedroom, Villa } from "../utils/Icons";
 import Button from "./Button";
+import style from "../styles/product.module.css";
+import { Link } from "react-router-dom";
 
-const Product = ({ name, description, bedCount, bathCount, price }) => {
+const Product = ({
+  name,
+  description,
+  bedCount,
+  bathCount,
+  price,
+  imgURL,
+  id,
+}) => {
   return (
-    <article>
-      <div>
-        <img src="" alt="" />
+    <article className={style.product} key={id}>
+      <div className={style.product__img}>
+        <img src={imgURL} alt={name} />
       </div>
-      <div>
+      <div className={style.product__description}>
         <h5>{name}</h5>
-        <p>{description}</p>
+        <p>
+          {description} <Link>Read More</Link>
+        </p>
       </div>
-      <div>
+      <div className={style.product__quantity}>
         <span>
           {Bedroom} {bedCount} Bedroom
         </span>
@@ -20,12 +32,12 @@ const Product = ({ name, description, bedCount, bathCount, price }) => {
         </span>
         <span>{Villa} Villa</span>
       </div>
-      <div>
+      <div className={style.product__price}>
         <div>
           <span>Price</span>
           <h5>${price}</h5>
         </div>
-        <Button />
+        <Button content="Browse Properties" bgColor={true} border={false} />
       </div>
     </article>
   );

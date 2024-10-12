@@ -1,9 +1,9 @@
-.properties {
+.testimonials {
   padding-inline: var(--spacing-80);
   padding-block-start: var(--spacing-80);
 }
 
-.products {
+.testimonials__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1rem;
@@ -11,7 +11,8 @@
 }
 
 @media screen and (width < 768px) {
-  .properties {
+  .testimonials {
     padding-inline: var(--spacing-16);
+    padding-block-start: var(--spacing-60);
   }
 }

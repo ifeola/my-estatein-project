@@ -78,6 +78,10 @@
 
   /* Border */
   --border: 1px solid var(--dark-15);
+
+  /* Transition */
+  --transition-duration: 150ms;
+  --transition-timing: ease;
 }
 
 *,
@@ -167,6 +171,7 @@ h6 {
   line-height: 1.1;
   font-weight: 500;
   font-family: "Urbanist";
+  text-wrap: balance;
 }
 
 h1 {
@@ -176,18 +181,22 @@ h1 {
 
 h2 {
   font-size: var(--laptop-heading-2);
+  font-weight: 700;
 }
 
 h3 {
   font-size: var(--laptop-heading-3);
+  font-weight: 700;
 }
 
 h4 {
   font-size: var(--laptop-heading-4);
+  font-weight: 600;
 }
 
 h5 {
   font-size: var(--laptop-heading-5);
+  font-weight: 600;
 }
 
 h6 {
@@ -214,9 +223,42 @@ ul {
   list-style: none;
 }
 
+main {
+  margin-top: 7rem;
+}
+
 main,
 footer {
   width: 100%;
   max-width: 1596px;
-  margin-top: 7rem;
+}
+
+@media screen and (width < 768px) {
+  body {
+    font-size: var(--mobile-body-copy);
+  }
+
+  h1 {
+    font-size: var(--mobile-heading-1);
+  }
+
+  h2 {
+    font-size: var(--mobile-heading-2);
+  }
+
+  h3 {
+    font-size: var(--mobile-heading-3);
+  }
+
+  h4 {
+    font-size: var(--mobile-heading-4);
+  }
+
+  h5 {
+    font-size: var(--mobile-heading-5);
+  }
+
+  h6 {
+    font-size: var(--mobile-heading-6);
+  }
 }

@@ -5,6 +5,8 @@
   padding: var(--spacing-10);
   background-color: var(--grey-08);
   border: 1px solid var(--grey-15);
+  border-top: 0.85rem solid var(--grey-10);
+  border-bottom: 0.85rem solid var(--grey-10);
 }
 
 .properties > div {
@@ -88,4 +90,14 @@
   right: var(--spacing-16);
   top: var(--spacing-16);
   cursor: pointer;
+}
+
+@media screen and (width < 768px) {
+  .properties {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-10);
+    border-radius: 16px;
+    border: 0.5rem solid var(--grey-10);
+    padding: var(--spacing-6);
+  }
 }

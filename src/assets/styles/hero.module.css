@@ -4,7 +4,6 @@
   align-items: center;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-40);
-  border-bottom: 0.85rem solid var(--grey-10);
 }
 
 .hero__copy {
@@ -18,9 +17,9 @@
 }
 
 .hero__info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--spacing-6);
 }
 
 .hero__info > div {
@@ -28,4 +27,29 @@
   border-radius: 8px;
   border: 1px solid var(--grey-15);
   background-color: var(--grey-10);
+  text-align: center;
+}
+
+@media screen and (width < 768px) {
+  .hero {
+    padding-block: var(--spacing-60);
+    padding-inline-start: var(--spacing-16);
+    grid-template-columns: 1fr;
+  }
+
+  .hero__image {
+    grid-row: 1/2;
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+  }
+
+  .hero__info {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__info > div:last-child {
+    grid-column: 1/3;
+  }
 }

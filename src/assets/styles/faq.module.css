@@ -1,0 +1,18 @@
+.faq {
+  display: grid;
+  gap: var(--spacing-24);
+  padding: var(--spacing-30);
+  border-radius: 8px;
+  border: 1px solid var(--grey-15);
+}
+
+.faq button {
+  width: fit-content;
+  height: fit-content;
+}
+
+@media screen and (width < 768px) {
+  .faq button {
+    width: 100%;
+  }
+}
