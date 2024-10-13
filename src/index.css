@@ -156,6 +156,10 @@ body {
   color: var(--grey-60);
 }
 
+section {
+  width: 100%;
+}
+
 img {
   display: block;
   max-width: 100%;

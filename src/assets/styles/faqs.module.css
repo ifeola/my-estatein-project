@@ -5,7 +5,7 @@
 
 .faqs__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
   margin-block: var(--spacing-60) var(--spacing-40);
 }
