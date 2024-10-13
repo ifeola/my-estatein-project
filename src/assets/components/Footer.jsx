@@ -69,19 +69,19 @@ const Footer = () => {
                   return <Link key={index}>{item}</Link>;
                 })}
               </ul>
+              <div className={style.contact}>
+                <h6>Contact Us</h6>
+                <ul className={style.footer__links}>
+                  {data.contact.map((item, index) => {
+                    return <Link key={index}>{item}</Link>;
+                  })}
+                </ul>
+              </div>
             </div>
             <div>
               <h6>Services</h6>
               <ul className={style.footer__links}>
                 {data.services.map((item, index) => {
-                  return <Link key={index}>{item}</Link>;
-                })}
-              </ul>
-            </div>
-            <div>
-              <h6>Contact Us</h6>
-              <ul className={style.footer__links}>
-                {data.contact.map((item, index) => {
                   return <Link key={index}>{item}</Link>;
                 })}
               </ul>
